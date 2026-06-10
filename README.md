@@ -19,26 +19,25 @@ A modern, fully responsive organic food e-commerce website built with HTML and C
 - CSS3 (Flexbox, Grid, Animations, Responsive Design)
 
 ## Project Structure
-
 Fresh-Organic-Food-Website/
 └── food website/
-    ├── index.html
-    ├── style.css
-    ├── shop.html
-    ├── shop.css
-    ├── login.html
-    ├── login.css
-    ├── recipie.html
-    └── images/
-        ├── Apple.jpeg
-        ├── Fruitssss.jpeg
-        ├── Graps.jpeg
-        ├── Mango.jpeg
-        ├── pumkin.jpeg
-        ├── sweet corn.jpeg
-        ├── sweet patato.jpeg
-        ├── healty food.jpeg
-        └── Vegatblesssssss.jpeg
+├── index.html
+├── style.css
+├── shop.html
+├── shop.css
+├── login.html
+├── login.css
+├── recipie.html
+└── images/
+├── Apple.jpeg
+├── Fruitssss.jpeg
+├── Graps.jpeg
+├── Mango.jpeg
+├── pumkin.jpeg
+├── sweet corn.jpeg
+├── sweet patato.jpeg
+├── healty food.jpeg
+└── Vegatblesssssss.jpeg
 
 ## Design Highlights
 
