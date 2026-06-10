@@ -1,0 +1,454 @@
+ /* for whole page */
+
+ :root {
+        --primary: #2d6a2d;
+        --primary-dark: #1e4d1e;
+        --primary-light: #4a9e4a;
+        --accent: #e53935;
+        --text: #222;
+        --text-light: #666;
+        --bg-light: #f0f4f0;
+        --white: #fff;
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #e6ece7;
+}
+
+/* Header section css */
+header {
+    background-color: #dfdbdb;
+    box-shadow: 0 2px 4px 10pxpxrgba(236, 232, 232, 0.1);
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.logo h1 {
+    color: #2f5a2d;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 1px 2px rgba(72, 232, 136, 0.1);
+}
+.logo h1:hover {
+    color: #1a3d1f;
+    transform: scale(1.05);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+nav {
+    padding: 0;
+}
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+nav li {
+    margin: 0;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+nav li:hover {
+    background-color: rgba(80, 187, 83, 0.5);
+}
+nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    color: #111;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: color 0.3s ease;
+}
+nav a:hover {
+    color: #2f5a2d;
+}
+
+/* Hero Section */
+/* for image */
+.hero {
+    background: url('healty food.jpeg') center/cover no-repeat;
+    min-height: 580px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+/* Dark overlay layer - makes background image darker so white text is readable */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);  /* 40% black transparency */
+    z-index: 1;  /* Sits on top of background image */
+}
+
+/* Position text and buttons on top of the dark overlay */
+.hero .container {
+    position: relative;
+    z-index: 2;  /* Sits above the dark overlay */
+    display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    align-items: flex-start;  /* Align text to the left */
+    justify-content: center;  /* Center vertically on page */
+    text-align: left;
+    padding: 40px;  /* Space around content */
+}
+/* h1 and p */
+.hero h1 {
+    color: #fff;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6), 0 0 20px rgba(47, 90, 45, 0.4);
+    word-spacing: 3px;
+}
+.hero p {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-style: italic;
+}
+/* for buttons */
+.hero .btn {
+    display: inline-block;
+    margin: 10px 15px 10px 0;
+}
+.hero .btn button {
+    background-color: #2f5a2d;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.hero .btn button:hover {
+    background-color: #1a3d1f;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.hero-image {
+    display: none;
+}
+
+    /* SHOP CONTROLS */
+    .shop-controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 32px 5% 16px;
+        flex-wrap: wrap;
+        gap: 16px;
+        background: var(--white);
+    }
+
+    .filter-tabs {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .filter-tabs button {
+        padding: 10px 22px;
+        border: 2px solid var(--primary);
+        border-radius: 50px;
+        background: transparent;
+        color: var(--primary);
+        font-weight: 600;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .filter-tabs button.active,
+    .filter-tabs button:hover {
+        background: var(--primary);
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    .sort-select {
+        padding: 10px 18px;
+        border: 2px solid #ddd;
+        border-radius: 12px;
+        font-size: 0.95rem;
+        color: #444;
+        background: white;
+        cursor: pointer;
+    }
+
+    /* PRODUCT GRID */
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 28px;
+        padding: 20px 5% 80px;
+    }
+
+    .product-card {
+        background: var(--white);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.09);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+
+    .product-card:hover img {
+        transform: scale(1.08);
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .card-badge {
+        display: inline-block;
+        background: #e8f5e8;
+        color: var(--primary);
+        font-size: 0.73rem;
+        font-weight: 700;
+        padding: 4px 12px;
+        border-radius: 30px;
+        margin-bottom: 10px;
+        letter-spacing: 0.5px;
+    }
+
+    .card-body h3 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+        color: var(--text);
+    }
+
+    .card-body p {
+        font-size: 0.9rem;
+        color: var(--text-light);
+        margin-bottom: 16px;
+        line-height: 1.5;
+    }
+
+    .card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .price {
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: var(--primary);
+    }
+
+    .price span {
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: #999;
+        text-decoration: line-through;
+        margin-left: 6px;
+    }
+
+    .add-btn {
+        background: var(--primary);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 12px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.25s ease;
+    }
+
+    .add-btn:hover {
+        background: var(--primary-dark);
+        transform: scale(1.05);
+    }
+
+    /* CART FLOATING BUTTON */
+    .cart-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: var(--primary);
+        color: white;
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+        box-shadow: 0 8px 25px rgba(45, 106, 45, 0.35);
+        cursor: pointer;
+        z-index: 1000;
+        transition: transform 0.3s ease;
+    }
+
+    .cart-float:hover {
+        transform: scale(1.1);
+    }
+
+    .cart-float .badge {
+        position: absolute;
+        top: -6px;
+        right: -6px;
+        background: var(--accent);
+        color: white;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        font-size: 0.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+   /* Main footer */
+footer {
+    background-color: #2f5a2d;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+/* Main footer */
+footer {
+    background-color: #2f5a2d;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.social-media h2 {
+    color: #f1e9e9;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    text-align: left;
+}
+.social-media a {
+    display: flex;
+    color: #fff6f6;
+    font-size: 20px;
+    transition: color 0.3s ease;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.social-media a:hover {
+    color: #a8d5a8;
+}
+
+.legal-links {
+    display: inline-block;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+}
+
+.footer p {
+    padding-top: 20px;
+}
+
+/* ===== Recipe page styles (migrated from recipes.css) ===== */
+/* Keeps recipe-specific layout while reusing site colors */
+.page-header{
+    text-align:center;
+    padding:60px;
+    background:linear-gradient(135deg,#2f5a2d,#4a9e4a);
+    color:white;
+}
+
+.featured{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    margin:50px auto;
+    max-width:1100px;
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+}
+.featured img{width:100%;height:100%;object-fit:cover}
+.featured-text{padding:40px}
+
+.recipe-search{ text-align:center; margin:30px }
+.recipe-search input{ padding:12px; width:60%; max-width:560px; border-radius:20px; border:1px solid #ccc }
+
+.recipe-tags{ display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin:10px 20px }
+.recipe-tags span{ padding:8px 16px; background:white; border:1px solid #ddd; border-radius:20px; cursor:pointer }
+.recipe-tags span.active{ background:#2f5a2d; color:white }
+
+.recipe-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:20px; padding:40px; max-width:1200px; margin:0 auto }
+.recipe-card{ background:white; border-radius:10px; overflow:hidden; box-shadow:0 8px 24px rgba(0,0,0,0.06) }
+.recipe-card img{ width:100%; height:180px; object-fit:cover }
+.recipe-info{ padding:14px }
+
+/* small responsive tweaks */
+@media (max-width:800px){
+  .featured{ grid-template-columns:1fr; margin:20px }
+  .recipe-search input{ width:90% }
+}
+
+/* ensure footer spacing for recipe page */
+footer{ margin-top:40px }
+
+/* end recipe styles */
