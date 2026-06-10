@@ -1,66 +1,70 @@
-# 🌿 Fresh Organic Food Website
+# Fresh Organic Food Website
+status : still working on this project.
 
-A modern and responsive **organic food website** built using **HTML & CSS**.
-This project showcases fresh fruits, vegetables, and healthy food with a clean and attractive UI design.
+A modern, fully responsive organic food e-commerce website built with HTML and CSS. It showcases fresh fruits, vegetables, and healthy produce with a clean, nature-inspired design.
 
-## 📸 Preview
-This website features:
-* 🍎 Fresh fruits section (apples, grapes, mangoes, etc.)
-* 🥦 Organic vegetables section
-* 🌽 Natural food items like sweet corn & sweet potatoes
-* 🌿 Beautiful hero section with healthy food background
+## Features
 
-## 🚀 Features
-* ✅ Responsive design (works on mobile & desktop)
-* ✅ Modern UI with smooth hover effects
-* ✅ Hero section with overlay text
-* ✅ Product cards with images and descriptions
-* ✅ Clean navigation bar
-* ✅ Footer with social media links
+- Fully responsive design optimized for mobile, tablet, and desktop
+- Modern and clean UI with smooth hover animations
+- Eye-catching hero section with overlay text
+- Product showcase with high-quality images of fresh produce
+- Product cards with descriptions
+- Additional pages: Shop, Login, and Recipes
+- Footer with social links and contact information
 
-## 🛠️ Technologies Used
-* HTML5
-* CSS3 (Flexbox, Responsive Design, Animations)
+## Technologies Used
 
-## 📂 Project Structure
+- HTML5
+- CSS3 (Flexbox, Grid, Animations, Responsive Design)
 
-```
-├── index.html
-├── style.css
-├── images/
-│   ├── apple.jpeg
-│   ├── fruits.jpeg
-│   ├── grapes.jpeg
-│   ├── mango.jpeg
-│   ├── pumpkin.jpeg
-│   ├── sweet corn.jpeg
-│   ├── sweet potato.jpeg
-│   └── vegetables.jpeg
-```
+## Project Structure
 
----
+Fresh-Organic-Food-Website/
+└── food website/
+    ├── index.html
+    ├── style.css
+    ├── shop.html
+    ├── shop.css
+    ├── login.html
+    ├── login.css
+    ├── recipie.html
+    └── images/
+        ├── Apple.jpeg
+        ├── Fruitssss.jpeg
+        ├── Graps.jpeg
+        ├── Mango.jpeg
+        ├── pumkin.jpeg
+        ├── sweet corn.jpeg
+        ├── sweet patato.jpeg
+        ├── healty food.jpeg
+        └── Vegatblesssssss.jpeg
 
-## 🎨 Design Highlights
-* 🌱 Nature-inspired color palette (green & earthy tones)
-* ✨ Smooth hover animations on cards and buttons
-* 📱 Fully responsive layout using Flexbox
-* 🖼️ High-quality food images for better user experience
+## Design Highlights
 
-## 📱 Responsive Design
-* Desktop: 3-column product layout
-* Tablet: 2-column layout
-* Mobile: Single column layout
+- Nature-inspired green and earthy color theme
+- Smooth hover effects on buttons and product cards
+- High-resolution food photography
+- Mobile-first responsive layout
 
+## How to Run Locally
 
-## 💡 Future Improvements
-* Add JavaScript for interactivity
-* Add shopping cart functionality
-* Connect with backend (Node.js / PHP)
-* Add login/signup system
+1. Clone the repository:
+   git clone https://github.com/Darshana-Bhandari/Fresh-Organic-Food-Website.git
 
-## 📬 Contact
-If you like this project, feel free to connect or give feedback!
+2. Navigate to the project folder:
+   cd Fresh-Organic-Food-Website/food website
 
-## ⭐ Show Your Support
-Give a ⭐ if you like this project!
+3. Open index.html in your browser
 
+## Future Enhancements
+
+- Add JavaScript for cart functionality
+- Implement shopping cart system
+- Backend integration (Node.js / PHP / Firebase)
+- User authentication and product search
+- Payment gateway integration
+
+## License
+
+This project is for educational purposes.
