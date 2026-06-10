@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop – Organic Food</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+<header>
+        <div class="container">
+            <div class="logo">
+                <h1>Organic Food</h1>
+            </div>
+            <nav>
+                <ul>
+                   <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fa fa-shopping-bag"></i> Shop</a></li>
+                    <li><a href="#"><i class="fa fa-list"></i> Categories</a></li>
+                    <li><a href="#"><i class="fa fa-cutlery"></i> Recipes</a></li>
+                    <li><a href="#"><i class="fa fa-info-circle"></i> About</a></li>
+                    <li><a href="#"><i class="fa fa-file-text"></i> Blog</a></li>
+                    <li><a href="#"><i class="fa fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="hero">
+        <div class="container">
+            <h1>our shop</h1>
+            <p>Fresh, organic, and delivered to your door</p>
+            <a href="#" class="btn">
+                <button>🛒 Shop Now</button>
+            </a>
+            <a href="#" class="btn">
+                <button>📚 Learn More</button>
+            </a>
+            <img src="healty food.jpeg" alt="Fresh organic vegetables" class="hero-image">
+        </div>
+    </section>
+
+<!-- CONTROLS -->
+<div class="shop-controls">
+  <div class="filter-tabs">
+    <button class="active">All</button>
+    <button>Fruits</button>
+    <button>Vegetables</button>
+    <button>Grains</button>
+    <button>Dairy</button>
+    <button>Herbs</button>
+  </div>
+  <select class="sort-select">
+    <option>Sort: Featured</option>
+    <option>Price: Low to High</option>
+    <option>Price: High to Low</option>
+    <option>Newest</option>
+  </select>
+</div>
+
+<!-- PRODUCT GRID -->
+<div class="product-grid">
+
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=400" alt="Apples"/>
+    <div class="card-body">
+      <span class="card-badge">Fruits</span>
+      <h3>Organic Red Apples</h3>
+      <p>Fresh and juicy apples, perfect for smoothies and snacks.</p>
+      <div class="card-footer">
+        <div class="price">$3.99 <span>$5.00</span></div>
+        <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1553279768-865429fa0078?w=400" alt="Mangoes"/>
+    <div class="card-body">
+      <span class="card-badge">Fruits</span>
+      <h3>Organic Mangoes</h3>
+      <p>Rich and sweet mangoes, perfect for desserts and juices.</p>
+      <div class="card-footer">
+        <div class="price">$4.49 <span>$6.00</span></div>
+        <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1537640538966-79f369143f8f?w=400" alt="Grapes"/>
+    <div class="card-body">
+      <span class="card-badge">Fruits</span>
+      <h3>Organic Grapes</h3>
+      <p>Delicious mixed grapes, perfect for snacking and wine.</p>
+      <div class="card-footer">
+        <div class="price">$5.99</div>
+        <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400" alt="Broccoli"/>
+    <div class="card-body">
+      <span class="card-badge">Vegetables</span>
+      <h3>Fresh Broccoli</h3>
+      <p>Crispy organic broccoli, loaded with vitamins and minerals.</p>
+      <div class="card-footer">
+        <div class="price">$2.49 <span>$3.50</span></div>
+        <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=400" alt="Potatoes"/>
+    <div class="card-body">
+      <span class="card-badge">Vegetables</span>
+      <h3>Sweet Potatoes</h3>
+      <p>Naturally sweet and nutritious, great for roasting or mashing.</p>
+      <div class="card-footer">
+        <div class="price">$3.29</div>
+        <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=400" alt="Pumpkin"/>
+    <div class="card-body">
+      <span class="card-badge">Vegetables</span>
+      <h3>Organic Pumpkin</h3>
+      <p>Farm-fresh pumpkin, ideal for soups, pies, and stews.</p>
+      <div class="card-footer">
+        <div class="price">$6.99 <span>$8.50</span></div>
+        <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1571680322279-a226e6a4cc2a?w=400" alt="Spinach"/>
+    <div class="card-body">
+      <span class="card-badge">Greens</span>
+      <h3>Baby Spinach</h3>
+      <p>Tender baby spinach leaves — a salad and smoothie staple.</p>
+      <div class="card-footer">
+        <div class="price">$2.99</div>
+        <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1601493700631-2d16becf638a?w=400" alt="Strawberries"/>
+    <div class="card-body">
+      <span class="card-badge">Fruits</span>
+      <h3>Organic Strawberries</h3>
+      <p>Bright, fragrant berries bursting with natural sweetness.</p>
+      <div class="card-footer">
+        <div class="price">$4.79 <span>$6.20</span></div>
+        <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FLOATING CART -->
+<div class="cart-float">
+  <i class="fas fa-shopping-cart"></i>
+  <span class="badge">0</span>
+</div>
+
+<footer>
+    <div class="footer">
+        <div class="social-media">
+            <h2>Follow Us On: </h2>
+
+            <a href="#"><i class="fa fa-facebook"></i> Facebook</a>
+            <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+            <a href="#"><i class="fa fa-instagram"></i> Instagram</a>
+            <a href="#"><i class="fa fa-linkedin"></i> LinkedIn</a>
+
+            <div class="contact-info">
+                <p>📞 Contact Us</p>
+                <p>Phone: +977-98XXXXXXXX</p>
+                <p>Email: organicstore@gmail.com</p>
+                <p>Location: 📍 Kathmandu, Nepal</p>
+            </div>
+
+            <p>&copy; 2026 Healthy Organic Food. All rights reserved.</p>
+
+            <div class="legal-links">
+
+            <a href="#">Privacy Policy.</a>
+            <a href="#">Terms of Service.</a>
+            </div>
+            <p>Visit our store</p>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+  // Filter tabs
+  document.querySelectorAll('.filter-tabs button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-tabs button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+  // Cart counter
+  let count = 0;
+  const badge = document.querySelector('.cart-float .badge');
+  document.querySelectorAll('.add-btn').forEach(btn => {
+    btn.addEventListener('click', () => { count++; badge.textContent = count; });
+  });
+</script>
+</body>
+</html>

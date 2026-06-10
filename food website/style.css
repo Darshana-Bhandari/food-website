@@ -421,3 +421,47 @@ footer {
 .footer p {
     padding-top: 20px;
 }
+
+/* ===== Recipe page styles (migrated from recipes.css) ===== */
+/* Keeps recipe-specific layout while reusing site colors */
+.page-header{
+    text-align:center;
+    padding:60px;
+    background:linear-gradient(135deg,#2f5a2d,#4a9e4a);
+    color:white;
+}
+
+.featured{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    margin:50px auto;
+    max-width:1100px;
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+}
+.featured img{width:100%;height:100%;object-fit:cover}
+.featured-text{padding:40px}
+
+.recipe-search{ text-align:center; margin:30px }
+.recipe-search input{ padding:12px; width:60%; max-width:560px; border-radius:20px; border:1px solid #ccc }
+
+.recipe-tags{ display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin:10px 20px }
+.recipe-tags span{ padding:8px 16px; background:white; border:1px solid #ddd; border-radius:20px; cursor:pointer }
+.recipe-tags span.active{ background:#2f5a2d; color:white }
+
+.recipe-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:20px; padding:40px; max-width:1200px; margin:0 auto }
+.recipe-card{ background:white; border-radius:10px; overflow:hidden; box-shadow:0 8px 24px rgba(0,0,0,0.06) }
+.recipe-card img{ width:100%; height:180px; object-fit:cover }
+.recipe-info{ padding:14px }
+
+/* small responsive tweaks */
+@media (max-width:800px){
+  .featured{ grid-template-columns:1fr; margin:20px }
+  .recipe-search input{ width:90% }
+}
+
+/* ensure footer spacing for recipe page */
+footer{ margin-top:40px }
+
+/* end recipe styles */

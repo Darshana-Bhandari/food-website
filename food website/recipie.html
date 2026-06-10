@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop – Organic Food</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Segoe UI',sans-serif;background:#f0f4f0;color:#222;}
+
+    /* NAV */
+    nav{display:flex;justify-content:space-between;align-items:center;padding:18px 60px;background:#fff;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.07);}
+    .logo{font-size:1.4rem;font-weight:800;color:#2d6a2d;letter-spacing:1px;}
+    .nav-links{display:flex;gap:32px;list-style:none;}
+    .nav-links a{text-decoration:none;color:#333;font-size:.95rem;display:flex;align-items:center;gap:6px;transition:color .2s;}
+    .nav-links a:hover{color:#2d6a2d;}
+    .nav-links a.active{color:#2d6a2d;font-weight:600;}
+
+    /* PAGE HEADER */
+    .page-header{background:linear-gradient(135deg,#2d6a2d 0%,#4a9e4a 100%);color:#fff;text-align:center;padding:60px 20px;}
+    .page-header h1{font-size:2.4rem;letter-spacing:2px;text-transform:uppercase;}
+    .page-header p{margin-top:10px;font-style:italic;opacity:.85;}
+
+    /* SHOP CONTROLS */
+    .shop-controls{display:flex;justify-content:space-between;align-items:center;padding:30px 60px 10px;flex-wrap:wrap;gap:16px;}
+    .filter-tabs{display:flex;gap:10px;flex-wrap:wrap;}
+    .filter-tabs button{padding:8px 20px;border:2px solid #2d6a2d;border-radius:25px;background:transparent;color:#2d6a2d;cursor:pointer;font-size:.88rem;font-weight:600;transition:all .2s;}
+    .filter-tabs button.active,.filter-tabs button:hover{background:#2d6a2d;color:#fff;}
+    .sort-select{padding:9px 16px;border:2px solid #ccc;border-radius:8px;font-size:.9rem;color:#444;cursor:pointer;}
+
+    /* PRODUCT GRID */
+    .product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:28px;padding:30px 60px 60px;}
+    .product-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.08);transition:transform .25s,box-shadow .25s;}
+    .product-card:hover{transform:translateY(-6px);box-shadow:0 10px 28px rgba(0,0,0,.14);}
+    .product-card img{width:100%;height:200px;object-fit:cover;}
+    .card-body{padding:18px;}
+    .card-badge{display:inline-block;background:#e8f5e8;color:#2d6a2d;font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px;}
+    .card-body h3{font-size:1rem;font-weight:700;color:#222;margin-bottom:6px;}
+    .card-body p{font-size:.85rem;color:#666;line-height:1.5;margin-bottom:14px;}
+    .card-footer{display:flex;justify-content:space-between;align-items:center;}
+    .price{font-size:1.1rem;font-weight:800;color:#2d6a2d;}
+    .price span{font-size:.75rem;font-weight:500;color:#999;text-decoration:line-through;margin-left:4px;}
+    .add-btn{background:#2d6a2d;color:#fff;border:none;padding:8px 16px;border-radius:8px;font-size:.85rem;cursor:pointer;display:flex;align-items:center;gap:6px;transition:background .2s;}
+    .add-btn:hover{background:#1e4d1e;}
+
+    /* CART SIDEBAR HINT */
+    .cart-float{position:fixed;bottom:30px;right:30px;background:#2d6a2d;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;box-shadow:0 6px 20px rgba(45,106,45,.4);cursor:pointer;}
+    .cart-float .badge{position:absolute;top:-4px;right:-4px;background:#e53935;color:#fff;width:20px;height:20px;border-radius:50%;font-size:.7rem;display:flex;align-items:center;justify-content:center;font-weight:700;}
+
+    /* FOOTER */
+    footer{background:#2d6a2d;color:#fff;padding:50px 60px 30px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;}
+    .footer-col h4{font-size:1rem;font-weight:700;margin-bottom:16px;letter-spacing:1px;text-transform:uppercase;}
+    .footer-col p,.footer-col a{font-size:.88rem;color:rgba(255,255,255,.8);line-height:2;text-decoration:none;display:block;}
+    .footer-col a:hover{color:#fff;}
+    .social-links{display:flex;gap:14px;margin-top:10px;}
+    .social-links a{color:rgba(255,255,255,.8);font-size:1.2rem;}
+    .footer-bottom{background:#1e4d1e;text-align:center;padding:16px;font-size:.82rem;color:rgba(255,255,255,.6);}
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">ORGANIC FOOD</div>
+  <ul class="nav-links">
+    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="shop.html" class="active"><i class="fas fa-shopping-bag"></i> Shop</a></li>
+    <li><a href="categories.html"><i class="fas fa-list"></i> Categories</a></li>
+    <li><a href="recipes.html"><i class="fas fa-utensils"></i> Recipes</a></li>
+    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+    <li><a href="blog.html"><i class="fas fa-newspaper"></i> Blog</a></li>
+    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <h1>Our Shop</h1>
+  <p>Fresh, organic, and delivered to your door</p>
+</div>
+
+<!-- CONTROLS -->
+<div class="shop-controls">
+  <div class="filter-tabs">
+    <button class="active">All</button>
+    <button>Fruits</button>
+    <button>Vegetables</button>
+    <button>Grains</button>
+    <button>Dairy</button>
+    <button>Herbs</button>
+  </div>
+  <select class="sort-select">
+    <option>Sort: Featured</option>
+    <option>Price: Low to High</option>
+    <option>Price: High to Low</option>
+    <option>Newest</option>
+  </select>
+</div>
+
+<!-- PRODUCT GRID -->
+<div class="product-grid">
+
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=400" alt="Apples"/>
+    <div class="card-body">
+      <span class="card-badge">Fruits</span>
+      <h3>Organic Red Apples</h3>
+      <p>Fresh and juicy apples, perfect for smoothies and snacks.</p>
+      <div class="card-footer">
+        <div class="price">$3.99 <span>$5.00</span></div>
+        <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1553279768-865429fa0078?w=400" alt="Mangoes"/>
+    <div class="card-body">
+      <span class="card-badge">Fruits</span>
+      <h3>Organic Mangoes</h3>
+      <p>Rich and sweet mangoes, perfect for desserts and juices.</p>
+      <div class="card-footer">
+        <div class="price">$4.49 <span>$6.00</span></div>
+        <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1537640538966-79f369143f8f?w=400" alt="Grapes"/>
+    <div class="card-body">
+      <span class="card-badge">Fruits</span>
+      <h3>Organic Grapes</h3>
+      <p>Delicious mixed grapes, perfect for snacking and wine.</p>
+      <div class="card-footer">
+        <div class="price">$5.99</div>
+        <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400" alt="Broccoli"/>
+    <div class="card-body">
+      <span class="card-badge">Vegetables</span>
+      <h3>Fresh Broccoli</h3>
+      <p>Crispy organic broccoli, loaded with vitamins and minerals.</p>
+      <div class="card-footer">
+        <div class="price">$2.49 <span>$3.50</span></div>
+        <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=400" alt="Potatoes"/>
+    <div class="card-body">
+      <span class="card-badge">Vegetables</span>
+      <h3>Sweet Potatoes</h3>
+      <p>Naturally sweet and nutritious, great for roasting or mashing.</p>
+      <div class="card-footer">
+        <div class="price">$3.29</div>
+        <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=400" alt="Pumpkin"/>
+    <div class="card-body">
+      <span class="card-badge">Vegetables</span>
+      <h3>Organic Pumpkin</h3>
+      <p>Farm-fresh pumpkin, ideal for soups, pies, and stews.</p>
+      <div class="card-footer">
+        <div class="price">$6.99 <span>$8.50</span></div>
+        <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1571680322279-a226e6a4cc2a?w=400" alt="Spinach"/>
+    <div class="card-body">
+      <span class="card-badge">Greens</span>
+      <h3>Baby Spinach</h3>
+      <p>Tender baby spinach leaves — a salad and smoothie staple.</p>
+      <div class="card-footer">
+        <div class="price">$2.99</div>
+        <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1601493700631-2d16becf638a?w=400" alt="Strawberries"/>
+    <div class="card-body">
+      <span class="card-badge">Fruits</span>
+      <h3>Organic Strawberries</h3>
+      <p>Bright, fragrant berries bursting with natural sweetness.</p>
+      <div class="card-footer">
+        <div class="price">$4.79 <span>$6.20</span></div>
+        <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FLOATING CART -->
+<div class="cart-float">
+  <i class="fas fa-shopping-cart"></i>
+  <span class="badge">0</span>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-col">
+    <h4>Organic Food</h4>
+    <p>Freshly picked ingredients delivered straight to your table, packed with nutrition and natural goodness.</p>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+  <div class="footer-col">
+    <h4>Quick Links</h4>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="categories.html">Categories</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="blog.html">Blog</a>
+  </div>
+  <div class="footer-col">
+    <h4>Contact Us</h4>
+    <p><i class="fas fa-phone"></i> +977-98XXXXXXXX</p>
+    <p><i class="fas fa-envelope"></i> organicstore@gmail.com</p>
+    <p><i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal</p>
+  </div>
+</footer>
+<div class="footer-bottom">© 2026 Healthy Organic Food. All rights reserved.</div>
+
+<script>
+  // Filter tabs
+  document.querySelectorAll('.filter-tabs button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-tabs button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+  // Cart counter
+  let count = 0;
+  const badge = document.querySelector('.cart-float .badge');
+  document.querySelectorAll('.add-btn').forEach(btn => {
+    btn.addEventListener('click', () => { count++; badge.textContent = count; });
+  });
+</script>
+</body>
+</html>
